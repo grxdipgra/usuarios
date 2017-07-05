@@ -1,0 +1,100 @@
+dn: CN=AVIDAD FERNANDEZ\, ALBERTO,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: AVIDAD FERNANDEZ, ALBERTO
+sn: AVIDAD FERNANDEZ
+telephoneNumber: 958247981
+facsimileTelephoneNumber: 666666666
+givenName: ALBERTO
+distinguishedName: CN=AVIDAD FERNANDEZ\, ALBERTO,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+instanceType: 4
+whenCreated: 20050707150546.0Z
+whenChanged: 20160125084649.0Z
+displayName: AVIDAD FERNANDEZ, ALBERTO
+uSNCreated: 79781
+memberOf: CN=ASIR,CN=Users,DC=grx
+memberOf: CN=ASISTENCIA REMOTA,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+memberOf: CN=INFRAESTRUCTURAS DE SISTEMAS Y COMUNICACIONES - N. TECNOLOGIAS,OU=SISTEMAS,DC=grx
+memberOf: CN=GRUPO SOFTWARE LIBRE,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+memberOf: CN=Usuarios Citrix,CN=Users,DC=grx
+memberOf: CN=Usuarios Terminal Server,CN=Users,DC=grx
+memberOf: CN=ATENCION INFORMATICA A USUARI@S,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+memberOf: CN=SISTEMAS DE INFORMACION (TODOS),OU=Contenedor Exchange,DC=grx
+memberOf: CN=INFORMATICA CENTROS EXTERNOS,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+memberOf: CN=SI,OU=SI - NUEVAS TECNOLOGIAS (SISTEMAS DE INFORMACION),OU=Recursos Perrera,DC=grx
+memberOf: CN=SICALWIN,OU=AE - Area Economica,OU=Recursos Perrera,DC=grx
+memberOf: CN=Opers. de cuentas,CN=Builtin,DC=grx
+uSNChanged: 76557627
+homeMTA: CN=Microsoft MTA,CN=ALFAGUARA,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=DIPUTACION DE GRANADA,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=grx
+proxyAddresses: SMTP:avidad@dipgra.es
+proxyAddresses: smtp:albertoavidad@dipgra.es
+proxyAddresses: X400:c=ES;a= ;p=DIPUTACION DE GR;o=GRUPO;s=AVIDAD FERNANDEZ;g=ALBERTO;
+homeMDB: CN=Mailbox Database 1 Recovery,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=DIPUTACION DE GRANADA,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=grx
+mDBUseDefaults: TRUE
+mailNickname: avidad
+name: AVIDAD FERNANDEZ, ALBERTO
+objectGUID:: R0X2KleYwU2nSTdVc41pSg==
+userAccountControl: 66048
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 130946501738356056
+lastLogoff: 0
+lastLogon: 130982937609271647
+logonHours:: ////////////////////////////
+pwdLastSet: 130021048430821556
+primaryGroupID: 513
+objectSid:: AQUAAAAAAAUVAAAAiHIrfFIY6GKIPGBKLhYAAA==
+adminCount: 1
+accountExpires: 9223372036854775807
+logonCount: 6377
+sAMAccountName: SI_ALBERTO
+sAMAccountType: 805306368
+showInAddressBook: CN=Todos los Usuarios,CN=All Address Lists,CN=Address Lists Container,CN=DIPUTACION DE GRANADA,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=grx
+showInAddressBook: CN=Lista global de direcciones predeterminada,CN=All Global Address Lists,CN=Address Lists Container,CN=DIPUTACION DE GRANADA,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=grx
+legacyExchangeDN: /O=DIPUTACION DE GRANADA/OU=GRUPO/cn=Recipients/cn=avidad
+userPrincipalName: SI_ALBERTO@grx
+lockoutTime: 0
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=grx
+dSCorePropagationData: 20150812104550.0Z
+dSCorePropagationData: 20150311112136.0Z
+dSCorePropagationData: 20150311104240.0Z
+dSCorePropagationData: 20150127100935.0Z
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 130981852053416808
+textEncodedORAddress: X400:C=ES;A= ;P=DIPUTACION DE GR;O=GRUPO;S=AVIDAD FERNANDEZ;G=ALBERTO;
+mail: avidad@dipgra.es
+msExchHomeServerName: /o=DIPUTACION DE GRANADA/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=ALFAGUARA
+msExchALObjectVersion: 224
+msExchMailboxSecurityDescriptor:: AQAUjBQAAAAwAAAATAAAAHwAAAABBQAAAAAABRUAAACIcit8UhjoYog8YEr0AQAAAQUAAAAAAAUVAAAAiHIrfFIY6GKIPGBK9AEAAAIAMAACAAAAAtAUAAMADQABAQAAAAAAAQAAAAAC2hQAawENAAEBAAAAAAABAAAAAAQAWAQgAAAAAQIkAAEAAAABBQAAAAAABRUAAACIcit8UhjoYog8YEqOBAAAAQIkAAEAAAABBQAAAAAABRUAAACIcit8UhjoYog8YEpOEQAAAQIkAAEAAAABBQAAAAAABRUAAACIcit8UhjoYog8YErSMgAAAQIkAAEAAAABBQAAAAAABRUAAACIcit8UhjoYog8YEovOQAAAAIUAAMAAgABAQAAAAAABQoAAAAAEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSi85AAAAEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSmUdAAAAEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgStIyAAABEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSgACAAABEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSgcCAAABEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSlAQAAABEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSqMtAAABEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSvQBAAAAEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSq4tAAAAEiQAAQAAAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSk4RAAAAEiQAAAACAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSkkcAAAAEiQAAAACAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSn0PAAAAEiQAAAACAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSqMtAAAAEiQAAAACAAEFAAAAAAAFFQAAAIhyK3xSGOhiiDxgSqQtAAAAEhQAAQAAAAEBAAAAAAAFEgAAAAASFAAAAAIAAQEAAAAAAAUUAAAAABIkAAAAAgABBQAAAAAABRUAAACIcit8UhjoYog8YEpOEQAAABIkAAAAAgABBQAAAAAABRUAAACIcit8UhjoYog8YEquLQAAABIkAAAAAgABBQAAAAAABRUAAACIcit8UhjoYog8YEqsLQAAABIkAAEAAwABBQAAAAAABRUAAACIcit8UhjoYog8YEpQEAAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEpPEQAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEqOBAAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEqjLQAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEqvLQAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEr0AQAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEoHAgAAABIkAAEADwABBQAAAAAABRUAAACIcit8UhjoYog8YEoAAgAA
+msExchUserAccountControl: 0
+msExchMailboxGuid:: +qSlCIGXdEuo8/TcUc15Xg==
+msExchPoliciesIncluded: bb9f75fa-7efe-427c-86c8-7b386f52f17c
+msExchPoliciesIncluded: {26491cfc-9e50-4857-861b-0cb8df22b5d7}
+msExchVersion: 44220983382016
+msExchRecipientTypeDetails: 1
+msExchWhenMailboxCreated: 20100922150947.0Z
+msExchSafeSendersHash:: HzdtCMUQ/9Kp6K/U
+msExchMobileMailboxFlags: 1
+msExchUMDtmfMap: reversedPhone:666666666
+msExchUMDtmfMap: reversedPhone:189742859
+msExchUMDtmfMap: emailAddress:284323
+msExchUMDtmfMap: lastNameFirstName:2843233376263392523786
+msExchUMDtmfMap: firstNameLastName:2523786284323337626339
+msExchUserCulture: es-ES,en-GB,en-AU
+msExchBlockedSendersHash:: 7IAGAcz0JgH8KPEBAGa5A2RxJwXB+vkH2/EKCKK/Hg2Yi4gQoF6/EWJRdxN/9cYTxsjcE99ZwhTsZeoVOgmXFhRCIhcPcboXuv3SF+9UBRnbX48aJV+LHi1v0B5aCpkfiAoNIdSWpiHhqbAhpkG8Iktn/CIo2VAlLK1gJhirXSd30hkoJqh6KNWIriqQV68stEe/LH6obS0XOZMvFGUhMSJ4mDMEQBE0cWZWNcw+XzUoRzM2BB1ZNtJgMzcFOsQ3QbLONxstgjyfUHE9qljlPtSKe0DNKPVBOJg2RXXI9EXtfOVGECdBRy+Nl0mjvOVJVk4nTHsmz07LwmtPlNSsUHW56lAJ/79RHEkbVIaBAld2wWZYk9UcXFNOwV3HkzVgbGMzYRyckGFKbWBig4QCZEBxXGYyWB5sIzXwbM5n823wwvNtoXKpcGs9PXF3+2BxMEVQdKqm+3W/GmN4whZDfD4QD34pfcZ+SUoAfy2QlX/SJaGBn2/vgbmZh4notb2JKrVyisi+BY2ESdyNOiawjmSm3Y5NztCQJeiZkiFRk5PKuZ2UKlzalmupAJjy4g6ZgkhRmc2sHJr2MsSbmbbkm1fJy5xNNiqeef45ocjSIqJiNLKjf92OpJOp2qSL8Uqm/9Vep9upAawTMweuddKPr3uX96/jiCqziOe5tXvdybdJLP3BI0wZw6j6ZcM0gDrETv+ZxejlMsaAr0rGomNOyeKCiNL4VmXUqeiv1Ix/1NYOnvnYh0ot2j2J0dsm5BfeKDlT3g5/fd4nNvrg0JU44fXAP+Jcb8/ic7454xaSYOZmRczmPyyQ54WZC+jvokPrChkh7NjjkuzIXUTtWI/z7b4wgvU=
+msExchTextMessagingState: 302120705
+msExchTextMessagingState: 16842751
+msExchRecipientDisplayType: 1073741824
+msExchRBACPolicyLink: CN=Default Role Assignment Policy,CN=Policies,CN=RBAC,CN=DIPUTACION DE GRANADA,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=grx
+
+# refldap://RECPROV.grx/DC=RECPROV,DC=grx
+
+# refldap://DomainDnsZones.grx/DC=DomainDnsZones,DC=grx
+
+# refldap://ForestDnsZones.grx/DC=ForestDnsZones,DC=grx
+
+# refldap://grx/CN=Configuration,DC=grx
+
