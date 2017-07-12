@@ -71,7 +71,7 @@
     </font>
    </property>
    <property name="text">
-    <string>MARIA PILAR FERNANDEZ DE LAS HERAS</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -243,9 +243,9 @@ correo</string>
    <property name="geometry">
     <rect>
      <x>400</x>
-     <y>120</y>
+     <y>150</y>
      <width>281</width>
-     <height>161</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="font">
@@ -269,8 +269,8 @@ correo</string>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>124</y>
+      <x>22</x>
+      <y>94</y>
       <width>100</width>
       <height>17</height>
      </rect>
@@ -285,40 +285,11 @@ correo</string>
      <string>Clave caduca</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>21</x>
-      <y>62</y>
-      <width>120</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>120</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="text">
-     <string>Ultima modificación</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="text_modif_clave">
-    <property name="geometry">
-     <rect>
-      <x>148</x>
-      <y>62</y>
-      <width>108</width>
-      <height>25</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="text_cambio_clave">
     <property name="geometry">
      <rect>
-      <x>148</x>
-      <y>31</y>
+      <x>149</x>
+      <y>32</y>
       <width>108</width>
       <height>25</height>
      </rect>
@@ -333,8 +304,8 @@ correo</string>
    <widget class="QLineEdit" name="text_clave_caduca">
     <property name="geometry">
      <rect>
-      <x>148</x>
-      <y>124</y>
+      <x>149</x>
+      <y>94</y>
       <width>108</width>
       <height>25</height>
      </rect>
@@ -343,8 +314,8 @@ correo</string>
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>31</y>
+      <x>22</x>
+      <y>32</y>
       <width>121</width>
       <height>17</height>
      </rect>
@@ -362,8 +333,8 @@ correo</string>
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>93</y>
+      <x>22</x>
+      <y>63</y>
       <width>120</width>
       <height>17</height>
      </rect>
@@ -381,8 +352,8 @@ correo</string>
    <widget class="QLineEdit" name="text_intentos">
     <property name="geometry">
      <rect>
-      <x>148</x>
-      <y>93</y>
+      <x>149</x>
+      <y>63</y>
       <width>108</width>
       <height>25</height>
      </rect>
@@ -421,7 +392,7 @@ correo</string>
   <widget class="QLineEdit" name="text_logon">
    <property name="geometry">
     <rect>
-     <x>497</x>
+     <x>528</x>
      <y>41</y>
      <width>108</width>
      <height>25</height>
@@ -434,7 +405,7 @@ correo</string>
   <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>402</x>
      <y>41</y>
      <width>91</width>
      <height>17</height>
@@ -453,7 +424,7 @@ correo</string>
   <widget class="QLineEdit" name="text_ulti_login">
    <property name="geometry">
     <rect>
-     <x>497</x>
+     <x>528</x>
      <y>72</y>
      <width>108</width>
      <height>25</height>
@@ -466,7 +437,7 @@ correo</string>
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>402</x>
      <y>72</y>
      <width>81</width>
      <height>17</height>
@@ -480,6 +451,35 @@ correo</string>
    </property>
    <property name="text">
     <string>Ultimo login</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="text_modif_clave">
+   <property name="geometry">
+    <rect>
+     <x>528</x>
+     <y>103</y>
+     <width>108</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>402</x>
+     <y>103</y>
+     <width>120</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Ultima modificación</string>
    </property>
   </widget>
   <zorder>text_usuario</zorder>
@@ -504,6 +504,8 @@ correo</string>
   <zorder>label_12</zorder>
   <zorder>text_ulti_login</zorder>
   <zorder>label_9</zorder>
+  <zorder>text_modif_clave</zorder>
+  <zorder>label_8</zorder>
   <zorder>list_usuarios</zorder>
  </widget>
  <resources/>

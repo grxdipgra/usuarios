@@ -9,7 +9,6 @@
 #include <QFile>
 #include <QDateTime>
 
-//carga el formulario usuarios
 form_usuarios::form_usuarios(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::form_usuarios)
@@ -118,12 +117,13 @@ void form_usuarios::on_list_usuarios_clicked(const QModelIndex &index)
 {
     ui->text_usuario->setText(ui->list_usuarios->currentItem()->text().trimmed());
     ui->list_usuarios->setVisible(false);
+    on_text_usuario_returnPressed();
 }
 
 //cuando pulsemos intro si hay un usuario lo escriba en el text y si hay mas se vaya a la lista
 void form_usuarios::on_text_usuario_returnPressed()
 {
-    QString salida, usuario;
+    QString salida, usuario, salida1;
     QProcess proceso;
     QMessageBox msgBox;
     int pos1,pos2;
@@ -147,16 +147,16 @@ void form_usuarios::on_text_usuario_returnPressed()
 //        msgBox.setText("OK, vamos a rellenar los datos del usuario");
 //        msgBox.exec();
 
-        //ejecutamos la consulta Ldap
-        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectclass=user)(samAccountName=" + ui->text_usuario->text() + "))\" ");
-        proceso.waitForFinished();
-        salida=proceso.readAllStandardOutput();
+//        //ejecutamos la consulta Ldap
+//        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectclass=user)(samAccountName=" + ui->text_usuario->text() + "))\" ");
+//        proceso.waitForFinished();
+//        salida=proceso.readAllStandardOutput();
 
         //consulta Ldap cargada en archivo
-//        QFile archivo("/home/si_serafin/Escritorio/QT/Usuarios_asistencia/ldap.txt");
-//        archivo.open(QIODevice::ReadOnly);
-//        QTextStream text_archivo(&archivo);
-//        salida=text_archivo.readAll();
+        QFile archivo("/home/si_serafin/git/usuarios/ldap.txt");
+        archivo.open(QIODevice::ReadOnly);
+        QTextStream text_archivo(&archivo);
+        salida=text_archivo.readAll();
 
         //nombre y apellidos
         pos1=salida.indexOf("cn:")+3;
@@ -206,8 +206,43 @@ void form_usuarios::on_text_usuario_returnPressed()
         else
             ui->text_estado->setText("Bloqueada");
 
+        //Numero de logon
+        pos1=salida.indexOf("logonCount:")+11;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        ui->text_logon->setText(usuario);
+
+        //Ultimo cambio de contraseña
+        pos1=salida.indexOf("pwdLastSet:")+11;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        fecha.setSecsSinceEpoch((usuario.toLongLong()/10000000)-11644473600);
+        ui->text_cambio_clave->setText(fecha.toString("dd-MM-yyyy  hh:mm"));
+
+        //Intentos fallidos de contraseña
+        pos1=salida.indexOf("badPwdCount:")+12;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        ui->text_intentos->setText(usuario);
 
 
+//        //ldapsearch -QLLL -o ldif-wrap=no -b "dc = grx" "(&(objectClass=domain))" maxPwdAge
+//        //ejecutamos la consulta Ldap para obtener el campo maxPwdAge
+//        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectClass=domain))\" maxPwdAge");
+//        proceso.waitForFinished();
+//        salida1=proceso.readAllStandardOutput();
+
+        //consulta Ldap cargada en archivo
+        QFile archivo1("/home/si_serafin/git/usuarios/ldap_dominio.txt");
+        archivo1.open(QIODevice::ReadOnly);
+        QTextStream text_archivo1(&archivo1);
+        salida=text_archivo1.readAll();
+
+        pos1=salida1.indexOf("maxPwdAge:")+10;
+        pos2=salida1.indexOf("\n",pos1);
+        usuario=salida1.mid(pos1,pos2-pos1).trimmed();
+        fecha.setSecsSinceEpoch((usuario.toLongLong()/10000000)-11644473600);
+        ui->text_clave_caduca->setText(fecha.toString("dd-MM-yyyy  hh:mm"));
 
 
     }
