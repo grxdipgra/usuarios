@@ -14,6 +14,7 @@ form_usuarios::form_usuarios(QWidget *parent) :
     ui(new Ui::form_usuarios)
 {
     ui->setupUi(this);
+    //hola
 
     //ocultamos el listwidget al abrir el formulario
     ui->list_usuarios->setVisible(false);
