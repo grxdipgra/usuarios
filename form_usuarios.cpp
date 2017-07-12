@@ -123,7 +123,7 @@ void form_usuarios::on_list_usuarios_clicked(const QModelIndex &index)
 //cuando pulsemos intro si hay un usuario lo escriba en el text y si hay mas se vaya a la lista
 void form_usuarios::on_text_usuario_returnPressed()
 {
-    QString salida, usuario, salida1;
+    QString salida, usuario, salida1, temp;
     QProcess proceso;
     QMessageBox msgBox;
     int pos1,pos2;
@@ -216,6 +216,7 @@ void form_usuarios::on_text_usuario_returnPressed()
         pos1=salida.indexOf("pwdLastSet:")+11;
         pos2=salida.indexOf("\n",pos1);
         usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        temp=salida.mid(pos1,pos2-pos1).trimmed();
         fecha.setSecsSinceEpoch((usuario.toLongLong()/10000000)-11644473600);
         ui->text_cambio_clave->setText(fecha.toString("dd-MM-yyyy  hh:mm"));
 
@@ -236,11 +237,13 @@ void form_usuarios::on_text_usuario_returnPressed()
         QFile archivo1("/home/si_serafin/git/usuarios/ldap_dominio.txt");
         archivo1.open(QIODevice::ReadOnly);
         QTextStream text_archivo1(&archivo1);
-        salida=text_archivo1.readAll();
+        salida1=text_archivo1.readAll();
 
-        pos1=salida1.indexOf("maxPwdAge:")+10;
+        pos1=salida1.indexOf("maxPwdAge:")+11;
         pos2=salida1.indexOf("\n",pos1);
         usuario=salida1.mid(pos1,pos2-pos1).trimmed();
+        qDebug() << usuario;
+        usuario=QString::number(temp.toLongLong()-usuario.toLongLong());
         fecha.setSecsSinceEpoch((usuario.toLongLong()/10000000)-11644473600);
         ui->text_clave_caduca->setText(fecha.toString("dd-MM-yyyy  hh:mm"));
 
