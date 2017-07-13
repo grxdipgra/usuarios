@@ -147,16 +147,16 @@ void form_usuarios::on_text_usuario_returnPressed()
 //        msgBox.setText("OK, vamos a rellenar los datos del usuario");
 //        msgBox.exec();
 
-//        //ejecutamos la consulta Ldap
-//        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectclass=user)(samAccountName=" + ui->text_usuario->text() + "))\" ");
-//        proceso.waitForFinished();
-//        salida=proceso.readAllStandardOutput();
+        //ejecutamos la consulta Ldap
+        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectclass=user)(samAccountName=" + ui->text_usuario->text() + "))\" ");
+        proceso.waitForFinished();
+        salida=proceso.readAllStandardOutput();
 
-        //consulta Ldap cargada en archivo
-        QFile archivo("/home/si_serafin/git/usuarios/ldap.txt");
-        archivo.open(QIODevice::ReadOnly);
-        QTextStream text_archivo(&archivo);
-        salida=text_archivo.readAll();
+//        //consulta Ldap cargada en archivo
+//        QFile archivo("/home/si_serafin/git/usuarios/ldap.txt");
+//        archivo.open(QIODevice::ReadOnly);
+//        QTextStream text_archivo(&archivo);
+//        salida=text_archivo.readAll();
 
         //nombre y apellidos
         pos1=salida.indexOf("cn:")+3;
@@ -227,25 +227,27 @@ void form_usuarios::on_text_usuario_returnPressed()
         ui->text_intentos->setText(usuario);
 
 
-//        //ldapsearch -QLLL -o ldif-wrap=no -b "dc = grx" "(&(objectClass=domain))" maxPwdAge
-//        //ejecutamos la consulta Ldap para obtener el campo maxPwdAge
-//        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectClass=domain))\" maxPwdAge");
-//        proceso.waitForFinished();
-//        salida1=proceso.readAllStandardOutput();
+        //ldapsearch -QLLL -o ldif-wrap=no -b "dc = grx" "(&(objectClass=domain))" maxPwdAge
+        //ejecutamos la consulta Ldap para obtener el campo maxPwdAge
+        proceso.start("ldapsearch -QLLL -o ldif-wrap=no -b \"dc = grx\" \"(&(objectClass=domain))\" maxPwdAge");
+        proceso.waitForFinished();
+        salida1=proceso.readAllStandardOutput();
 
-        //consulta Ldap cargada en archivo
-        QFile archivo1("/home/si_serafin/git/usuarios/ldap_dominio.txt");
-        archivo1.open(QIODevice::ReadOnly);
-        QTextStream text_archivo1(&archivo1);
-        salida1=text_archivo1.readAll();
+//        //consulta Ldap cargada en archivo
+//        QFile archivo1("/home/si_serafin/git/usuarios/ldap_dominio.txt");
+//        archivo1.open(QIODevice::ReadOnly);
+//        QTextStream text_archivo1(&archivo1);
+//        salida1=text_archivo1.readAll();
 
         pos1=salida1.indexOf("maxPwdAge:")+11;
         pos2=salida1.indexOf("\n",pos1);
         usuario=salida1.mid(pos1,pos2-pos1).trimmed();
-        qDebug() << usuario;
+        //qDebug() << usuario;
         usuario=QString::number(temp.toLongLong()-usuario.toLongLong());
         fecha.setSecsSinceEpoch((usuario.toLongLong()/10000000)-11644473600);
         ui->text_clave_caduca->setText(fecha.toString("dd-MM-yyyy  hh:mm"));
+//useraccountcontrol=66048 	Enabled, Password Doesn't Expire
+        //66050 	Disabled, Password Doesn't Expire
 
 
     }
