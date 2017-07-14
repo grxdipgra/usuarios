@@ -453,7 +453,7 @@ correo</string>
     <string>Ultimo login</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="text_modif_clave">
+  <widget class="QLineEdit" name="text_modif_cuenta">
    <property name="geometry">
     <rect>
      <x>528</x>
@@ -504,7 +504,7 @@ correo</string>
   <zorder>label_12</zorder>
   <zorder>text_ulti_login</zorder>
   <zorder>label_9</zorder>
-  <zorder>text_modif_clave</zorder>
+  <zorder>text_modif_cuenta</zorder>
   <zorder>label_8</zorder>
   <zorder>list_usuarios</zorder>
  </widget>

@@ -187,9 +187,10 @@ void form_usuarios::on_text_usuario_returnPressed()
         //la cuenta caduca
         pos1=salida.indexOf("accountExpires:")+15;
         pos2=salida.indexOf("\n",pos1);
-        usuario=salida.mid(pos1,pos2-pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();;
+        qDebug()<<usuario;
         //usuario="9223372036854775807";
-        if (usuario.toLongLong()==9223372036854775807)
+        if (usuario.toLongLong()==9223372036854775807 || usuario=="0")
              ui->text_cuenta_caduca->setText("No Caduca");
         else {
             fecha.setSecsSinceEpoch((usuario.toLongLong()/10000000)-11644473600);
@@ -212,6 +213,34 @@ void form_usuarios::on_text_usuario_returnPressed()
         usuario=salida.mid(pos1,pos2-pos1).trimmed();
         ui->text_logon->setText(usuario);
 
+        //Creada
+        pos1=salida.indexOf("whenCreated:")+12;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        usuario=usuario.mid(6,2)+"-"+usuario.mid(4,2)+"-"+usuario.mid(0,4);
+        ui->text_creada->setText(usuario);
+
+        //cuando se creo la cuenta
+        pos1=salida.indexOf("whenCreated:")+12;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        usuario=usuario.mid(6,2)+"-"+usuario.mid(4,2)+"-"+usuario.mid(0,4);
+        ui->text_creada->setText(usuario);
+
+        //cuando se modifico por ultima vez la cuenta
+        pos1=salida.indexOf("whenChanged:")+12;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        usuario=usuario.mid(6,2)+"-"+usuario.mid(4,2)+"-"+usuario.mid(0,4);
+        ui->text_modif_cuenta->setText(usuario);
+
+        //cuando se creo la cuenta de correo
+        pos1=salida.indexOf("msExchWhenMailboxCreated:")+25;
+        pos2=salida.indexOf("\n",pos1);
+        usuario=salida.mid(pos1,pos2-pos1).trimmed();
+        usuario=usuario.mid(6,2)+"-"+usuario.mid(4,2)+"-"+usuario.mid(0,4);
+        ui->text_fecha_correo->setText(usuario);
+
         //Ultimo cambio de contraseña
         pos1=salida.indexOf("pwdLastSet:")+11;
         pos2=salida.indexOf("\n",pos1);
@@ -233,7 +262,7 @@ void form_usuarios::on_text_usuario_returnPressed()
         //useraccountcontrol=66048 	Enabled, Password Doesn't Expire
         //useraccountcontrol=66050 	Disabled, Password Doesn't Expire
         if (usuario=="66048") {
-            ui->text_clave_caduca->setText("NO CADUCA");
+            ui->text_clave_caduca->setText("No caduca");
         }
         else{
             //ejecutamos la consulta Ldap para obtener el campo maxPwdAge
