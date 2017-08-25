@@ -27,6 +27,12 @@ private slots:
 
     void prueba();
 
+    void on_text_nombre_returnPressed();
+
+    void on_text_nombre_textChanged(const QString &arg1);
+
+    void on_list_usuarios_2_clicked(const QModelIndex &index);
+
 private:
     Ui::form_usuarios *ui;
 

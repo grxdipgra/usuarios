@@ -482,6 +482,22 @@ correo</string>
     <string>Ultima modificación</string>
    </property>
   </widget>
+  <widget class="QListWidget" name="list_usuarios_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>70</y>
+     <width>256</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(32, 74, 135);</string>
+   </property>
+  </widget>
   <zorder>text_usuario</zorder>
   <zorder>label</zorder>
   <zorder>text_nombre</zorder>
@@ -507,6 +523,7 @@ correo</string>
   <zorder>text_modif_cuenta</zorder>
   <zorder>label_8</zorder>
   <zorder>list_usuarios</zorder>
+  <zorder>list_usuarios_2</zorder>
  </widget>
  <resources/>
  <connections/>
